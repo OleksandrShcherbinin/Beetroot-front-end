@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Форма для заполнения</title>
+  <link rel="stylesheet" href="static/style.css">
+</head>
+<body>
+<!--Это шапка сайта-->
+  <header>
+    <nav>
+      <ul>
+        <li><a href="./cv.html">Моё резюме</a></li>
+        <li><a href="./video.html">Моё видео</a></li>
+        <li><a href="./audio.html">Мое аудио</a></li>
+        <li><a href="./form.html">Заполните форму</a></li>
+        <li><a href="./index.html#first">1-й якорь</a></li>
+        <li><a href="./index.html#second">2-й якорь</a></li>
+        <li><a href="./index.html#third">3-й якорь</a></li>
+      </ul>
+    </nav>
+  </header>
+  <br>
+<!--    Это форма-->
+    <form action="" method="get">
+      <fieldset>
+        <legend>Форма для друзей</legend>
+          <input type="text" name="firstname" placeholder="Введите имя" size="50" maxlength="50" minlength="3" required><br><br>
+          <input type="text" name="lastname" placeholder="Введите фамилию" size="50" maxlength="50" minlength="3" required><br><br>
+          <label for="email">Электронка:</label>
+          <input type="email" id="email" name="email" autocomplete="on" required><br><br>
+          <label for="birthday">День Рождения</label>
+          <input type="date" id="birthday" name="birthday" required><br><br>
+          <label for="text">Ваше сообщение
+            <textarea name="message" id="text" cols="100" rows="20" maxlength="500"></textarea><br><br>
+          </label><br><br>
+          <label for="gender">Укажите ваш пол</label>
+          <select name="gender" id="gender">
+            <option value="male">Мужчина</option>
+            <option value="female">Девушка</option>
+            <option value="dont-know">Еще не определился</option>
+          </select><br><br>
+          <legend>Любимые животные</legend>
+          <label for="cat">Коты
+            <input id="cat" name="pet" type="radio" value="cat">
+          </label>
+          <br>
+          <label for="dog">Собаки
+            <input id="dog" name="pet" type="radio" value="dog">
+          </label>
+          <br>
+          <label for="other">Другие
+            <input id="other" name="pet" type="radio" value="other">
+          </label>
+          <br><br>
+          <legend>Ваши front-end навычки:</legend>
+            <input type="checkbox" id="html" name="html" value="Html">
+            <label for="html">Знаю HTML5</label><br>
+            <input type="checkbox" id="css" name="css" value="Css">
+            <label for="css">Знаю CSS</label><br>
+            <input type="checkbox" id="javascript" name="javascript" value="Javascript">
+            <label for="javascript">Знаю Java Script</label><br>
+            <input type="checkbox" id="nothing" name="nothing" value="Nothing">
+            <label for="nothing">Пока ничего не знаю</label><br>
+          <br><br>
+          <input type="submit" value="Отправить">
+      </fieldset>
+    </form>
+  <br>
+<!-- Это футер -->
+  <footer>
+    <p>&copy;Copyright: Oleksandr Shcherbinin</p>
+    <p><a href="mailto:shcherbininalex81@gmail.com">shcherbininalex81@gmail.com</a></p>
+  </footer>
+</body>
+</html>
