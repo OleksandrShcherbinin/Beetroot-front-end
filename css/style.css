@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-image: url(../media/basketball.jpg);
+  background-image: url(../img/basketball.jpg);
   height: 250px;
   margin: auto;
   text-align: center;
@@ -188,5 +188,19 @@ footer {
   padding: 3px;
   background-color: DarkSalmon;
   color: white;
+  margin: 5%;
+}
+
+.main-menu {
   margin: auto;
+  height: 289px;
+  background-color: #ffffff;
+}
+
+.main-menu img {
+  width: 100%;
+}
+
+.main-menu a:hover {
+  background-color: #faff7c;
 }
