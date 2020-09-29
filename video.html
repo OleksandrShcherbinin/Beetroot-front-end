@@ -2,8 +2,13 @@
 <html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
   <meta charset="UTF-8">
-  <title>Моё видео</title>
-  <link rel="stylesheet" href="./static/style.css">
+  <title>Домашнее задание номер 6. CSS селекторыи - моё видео</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <!-- Это шапка сайта-->
@@ -14,20 +19,27 @@
         <li><a href="./video.html">Моё видео</a></li>
         <li><a href="./audio.html">Мое аудио</a></li>
         <li><a href="./form.html">Заполните форму</a></li>
-        <li><a href="./index.html#first">1-й якорь</a></li>
-        <li><a href="./index.html#second">2-й якорь</a></li>
-        <li><a href="./index.html#third">3-й якорь</a></li>
       </ul>
     </nav>
   </header>
 <!-- Это видео раздел-->
-  <div class="media">
-    <video width="640" height="360" controls autoplay muted>
-      <source src="media/dunk.webm" type="video/webm">
-      <source src="media/dunk.ogv" type="video/ogg">
-      Your browser does not support the video tag.
-    </video>
-  </div>
+  <main>>
+    <nav class="main-menu">
+      <ul>
+        <li><a href="#"><img src="./img/first-logo.png" alt="logo1"></a></li>
+        <li><a href="#"><img src="./img/second-logo.png" alt="logo2"></a></li>
+        <li><a href="#"><img src="./img/third-logo.png" alt="logo3"></a></li>
+      </ul>
+    </nav>
+    <div class="media">
+      <video width="640" height="360" controls autoplay muted>
+        <source src="./video/dunk.webm" type="video/webm">
+        <source src="./video/dunk.ogv" type="video/ogg">
+        <source src="./video/dunk.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </main>
 <!--Это футер-->
   <footer>
     <p>&copy;Copyright: Oleksandr Shcherbinin</p>
