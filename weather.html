@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -25,31 +26,39 @@
 </header>
 <!--Основной контент сайта-->
 <main class="container">
-    <section class="section-title">
-        <h3>who we are</h3>
-        <h1>Hello & Namaste</h1>
-        <h2>We do not build websites but user experiences. We</h2>
-        <h2>judge our performance according to the impact it</h2>
-    </section>
-    <section class="section-blocks">
-        <div class="block"><img src="./img/anchor.png" alt="anchor logo">
-            <h4>web design</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
-        </div>
-        <div class="block"><img src="./img/diamond.png" alt="diamond logo">
-            <h4>web development</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
-        </div>
-        <div class="block"><img src="./img/eyeglasses.png" alt="eyeglasses logo">
-            <h4>Graphics</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
-        </div>
-        <div class="block"><img src="./img/monitor.png" alt="monitor logo">
-            <h4>Illustrations</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
-        </div>
-    </section>
-
+    <article>
+        <section class="forecast">
+            <h1 class="weather-forecast">CSS Weather forecast <i class="wi wi-sunrise"></i></h1>
+            <div class="inline-block">
+                <ul class="inline-list">
+                    <li id="lisbon"><a>Lisbon 21 &#8451;<i class="wi wi-day-sunny"></i></a></li>
+                    <li id="paris"><a>Paris 11 &#8451;<i class="wi wi-day-sleet"></i></a></li>
+                    <li id="belgrade"><a>Belgrade 15 &#8451;<i class="wi wi-day-cloudy"></i></a></li>
+                </ul>
+            </div>
+            <div class="inline-block">
+                <ul class="inline-list">
+                    <li id="moscow"><a>Moscow 21 &#8451;<i class="wi wi-day-cloudy-high"></i></a></li>
+                    <li id="tel-aviv"><a>Tel-Aviv 32 &#8451;<i class="wi wi-hot"></i></a></li>
+                    <li id="cairo"><a>Cairo 21 &#8451;<i class="wi wi-day-sunny"></i> </a></li>
+                    <li id="new-york"><a>New York 17 &#8451;<i class="wi wi-day-storm-showers"></i></a></li>
+                </ul>
+            </div>
+            <div class="inline-block">
+                <ul class="inline-list">
+                    <li id="new-delhi"><a>New Delhi 17 &#8451;<i class="wi wi-rain-wind"></i></a></li>
+                    <li id="san-fransisco"><a>Sab Fransisco 15 &#8451;<i class="wi wi-day-sunny-overcast"></i></a></li>
+                    <li id="tokyo"><a>Tokyo 8 &#8451;<i class="wi wi-night-clear"></i></a></li>
+                </ul>
+            </div>
+            <div class="inline-block">
+                <ul class="inline-list">
+                    <li id="sydney"><a>Sydney 25 &#8451;<i class="wi wi-night-partly-cloudy"></i></a></li>
+                </ul>
+            </div>
+            <p>Have a nice day and don't forget umbrella if you are in New Delhi now!</p>
+        </section>
+    </article>
 </main>
 <!--Это футер сайта-->
 <footer>
