@@ -112,8 +112,6 @@ h3 {
 }
 
 img ~ h4 {
-    /* Style for "web design" */
-    color: #1b1b1b;
     margin: 70px 50px 0 50px;
     font-size: 1.5em;
     text-transform: uppercase;
@@ -124,7 +122,6 @@ img ~ h4 {
 }
 
 h4 ~ p {
-    color: #777777;
     margin: 50px 40px 0 40px;
     font-size: 1em;
     font-weight: 400;
