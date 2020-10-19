@@ -1,0 +1,75 @@
+@import "variables";
+
+@mixin headerSection {
+  background-image: url("../img/strawberry.png");
+  background-position: center;
+  min-height: 1064px;
+  padding: 0 11%;
+
+  @media only screen and (max-width: 576px) {
+    background-image: url("../img/small-strawberry.png");
+    background-size: cover;
+  }
+
+}
+
+@mixin logoText {
+    font-family: Pacifico-Regular, sans-serif;
+    font-size: 50px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+@mixin button($background) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 55px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  background-color: $background;
+  color: $light-text;
+  font-family: $regular-text;
+  font-size: 20px;
+  font-weight: 300;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+@mixin bigTitle($text-color) {
+  color: $text-color;
+  font-family: $regular-text;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+@mixin contentText($font-family, $text-color, $size, $weight) {
+  font-family: $font-family;
+  color: $text-color;
+  font-size: $size;
+  font-weight: $weight;
+}
+
+@mixin backgroundNice($image-url, $position) {
+  background-image: $image-url;
+  background-position: $position;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
+
+@mixin aboutUs {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 700px;
+  background-color: #00c4c4;
+  background-image: radial-gradient(circle 1125px at center, rgba(0, 196, 196, 0.9) 0%, rgba(0, 183, 183, 0.9) 32%, rgba(0, 173, 173, 0.9) 68%, rgba(0, 156, 156, 0.9) 100%);
+  @media only screen and (max-width:320px) {
+    min-height: 450px;
+  }
+}
+
+

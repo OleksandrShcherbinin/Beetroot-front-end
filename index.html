@@ -1,66 +1,151 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Домашнее задание номер 7 CSS Box Model. Hello and Namaste!</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/favicon-16x16.png">
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css">
-    <link rel="stylesheet" href="css/style.css">
-
+    <title>Preprocessors</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-<!--Это шапка сайта-->
-<header>
-    <nav>
-        <ul>
-            <li><a href="index.html">HELLO & NAMASTE</a></li>
-            <li><a href="weather.html">WEATHER</a></li>
-        </ul>
-    </nav>
-</header>
-<!--Основной контент сайта-->
-<main class="container">
-    <section class="section-title">
-        <h3>who we are</h3>
-        <h1>Hello & Namaste</h1>
-        <h2>We do not build websites but user experiences. We</h2>
-        <h2>judge our performance according to the impact it</h2>
+<main class="main">
+    <div class="scroll-img" onclick="topFunction()" id="scroll-mouse">
+        <img src="./img/scroll.png" alt="scroll">
+    </div>
+    <div class="header-section">
+<!--        Header                   -->
+        <header class="header">
+            <h3 class="header__logo">Cahee</h3>
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="#" class="menu__link">Home</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#about" class="menu__link">About</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#services" class="menu__link">Services</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="#gallery" class="menu__link">Gallery</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Blog</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <article class="head-content">
+            <h1 class="head-content__title">Fresh Life</h1>
+            <p class="head-content__text">Sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.
+            </p>
+            <div class="head-content__button">GET FREE NOW</div>
+        </article>
+    </div>
+    <div id="about" class="about-us">
+        <div class="about-us-image">
+            <img class="about-us-image__big" src="./img/raspberry.png" alt="raspberry">
+            <img class="about-us-image__small" src="./img/small-raspberry.png" alt=" small raspberry">
+        </div>
+        <section class="about-us-content">
+            <h2 class="about-us-content__title">About Us</h2>
+            <p class="about-us-content__text">Abore Cahee magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+            <p class="about-us-content__text">Nim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore.
+            </p>
+        </section>
+    </div>
+<!-- Services section -->
+    <section id="services" class="our-services">
+        <h1 class="our-services__title--hidden">Our Services</h1>
+        <div class="button-icons">
+            <div class="icon-item">
+                <div class="icon-text">
+                    <h3 class="icon__title">Online Shopping</h3>
+                </div>
+                <div class="icon-image">
+                    <img class="icon__image" src="./img/cart.svg" alt="cart icon">
+                </div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-text">
+                    <h3 class="icon__title">Quality Product</h3>
+                </div>
+                <div class="icon-image">
+                    <img class="icon__image" src="./img/hand.svg" alt="hand icon">
+                </div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-text">
+                    <h3 class="icon__title">Domestic & International Delivery</h3>
+                </div>
+                <div class="icon-image">
+                    <img class="icon__image" src="./img/planet.svg" alt="planet icon">
+                </div>
+            </div>
+            <div class="icon-item">
+                <div class="icon-text">
+                    <h3 class="icon__title">Well Organized</h3>
+                </div>
+                <div class="icon-image">
+                    <img class="icon__image" src="./img/carrot.svg" alt="carrot icon">
+                </div>
+            </div>
+        </div>
+        <div class="our-services__image">
+            <h1 class="our-services__title">Our Services</h1>
+        </div>
     </section>
-    <section class="section-blocks">
-        <div class="block">
-            <img src="./img/anchor.png" alt="anchor logo">
-            <h4>web design</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
+    <section id="gallery" class="gallery">
+        <div class="gallery-text">
+            <h1 class="gallery-text__title">Gallery</h1>
+            <p class="gallery-text__text">Consectetur adipisicing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
+                ea commodo consequat.
+            </p>
         </div>
-        <div class="block">
-            <img src="./img/diamond.png" alt="diamond logo">
-            <h4 id="second-sub-title">web development</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
+        <div class="photo-container">
+            <div class="first-row">
+                <div class="big-pic"></div>
+                <div class="small-column">
+                    <div class="small-column__pic-1"></div>
+                    <div class="small-column__pic-2"></div>
+                </div>
+            </div>
+            <div class="second-row">
+                <div class="second-row__pic-1"></div>
+                <div class="second-row__pic-2"></div>
+            </div>
         </div>
-        <div class="block">
-            <img src="./img/eyeglasses.png" alt="eyeglasses logo">
-            <h4>Graphics</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
-        </div>
-        <div class="block">
-            <img src="./img/monitor.png" alt="monitor logo">
-            <h4>Illustrations</h4>
-            <p>Fresh, lively and informative content, is key to any successful website, so take a look at your website's content on a regular basis. </p>
+        <div class="button-container">
+            <div class="button-container__button">view more</div>
         </div>
     </section>
-
+    <section class="subscribe">
+        <div class="subscribe-col">
+            <div class="subscribe-row-1">
+                <h4 class="subscribe-row-1__title">Subscribe To Us</h4>
+                <p class="subscribe-row-1__text">Dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam.
+                </p>
+            </div>
+            <div class="row subscribe-row-2">
+                <form class="subscribe-form" action="" method="get">
+                    <input type="email" placeholder="Your email address...">
+                    <input type="submit" value="SUBSCRIBE">
+                </form>
+            </div>
+        </div>
+    </section>
 </main>
-<!--Это футер сайта-->
-<footer>
-    <p>&copy;Copyright: <strong>Oleksandr Shcherbinin</strong> 2020</p>
-    <p><a href="mailto:shcherbininalex81@gmail.com"> shcherbininalex81@gmail.com</a></p>
-</footer>
-
+<script src="./js/main.js"></script>
 </body>
 </html>

@@ -1,0 +1,6 @@
+$padding: 10px;
+$margin: 20px;
+
+@function img-size($w) {
+  @return $w + $padding + ($margin - 5);
+}
