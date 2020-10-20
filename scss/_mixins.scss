@@ -59,6 +59,17 @@
   -o-background-size: cover;
 }
 
+@mixin backgroundGradient($image-url) {
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(255, 255, 255, 0.2) 100%),
+  $image-url;
+  background-position: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 
 @mixin aboutUs {
   display: flex;

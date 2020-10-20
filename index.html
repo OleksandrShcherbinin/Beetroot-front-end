@@ -30,7 +30,7 @@
                         <a href="#gallery" class="menu__link">Gallery</a>
                     </li>
                     <li class="menu__item">
-                        <a href="" class="menu__link">Blog</a>
+                        <a href="#blog" class="menu__link">Blog</a>
                     </li>
                     <li class="menu__item">
                         <a href="" class="menu__link">Contact</a>
@@ -63,7 +63,7 @@
     </div>
 <!-- Services section -->
     <section id="services" class="our-services">
-        <h1 class="our-services__title--hidden">Our Services</h1>
+        <h2 class="our-services__title--hidden">Our Services</h2>
         <div class="button-icons">
             <div class="icon-item">
                 <div class="icon-text">
@@ -99,12 +99,12 @@
             </div>
         </div>
         <div class="our-services__image">
-            <h1 class="our-services__title">Our Services</h1>
+            <h2 class="our-services__title">Our Services</h2>
         </div>
     </section>
     <section id="gallery" class="gallery">
         <div class="gallery-text">
-            <h1 class="gallery-text__title">Gallery</h1>
+            <h3 class="gallery-text__title">Gallery</h3>
             <p class="gallery-text__text">Consectetur adipisicing elit, sed do eiusmod
                 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
                 veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
@@ -137,12 +137,59 @@
                     Ut enim ad minim veniam.
                 </p>
             </div>
-            <div class="row subscribe-row-2">
+            <div class="subscribe-row-2">
                 <form class="subscribe-form" action="" method="get">
-                    <input type="email" placeholder="Your email address...">
+                    <input type="email" name="email" placeholder="Your email address..." required>
                     <input type="submit" value="SUBSCRIBE">
                 </form>
             </div>
+        </div>
+    </section>
+    <section id="blog" class="blog">
+        <div class="blog-header">
+            <h4 class="blog-header__title">Blog</h4>
+            <p class="blog-header__text">Dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate velit.
+            </p>
+        </div>
+        <div class="blog-photo">
+            <div class="blog-photo-section">
+                <svg class="blog-photo-section__date" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g>
+                    <g opacity=".5"><path fill="#262626" d="M5 0h50a5 5 0 0 1 5 5v50a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"/></g></g>
+                    <text class="blog-photo-section__date--date1" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle">20</text>
+                    <text class="blog-photo-section__date--month" x="50%" y="75%" dominant-baseline="middle" text-anchor="middle">NOV</text>
+                </svg>
+                <div class="blog-photo-section-titles">
+                    <h4 class="blog-photo-section-titles__title">Green Smoothies: Too Much of a Good Thing?</h4>
+                    <h5 class="blog-photo-section-titles__author">By Auskteez - 2 hours ago</h5>
+                </div>
+            </div>
+            <div class="blog-photo-section">
+                <svg class="blog-photo-section__date" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g>
+                    <g opacity=".5"><path fill="#262626" d="M5 0h50a5 5 0 0 1 5 5v50a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"/></g></g>
+                    <text class="blog-photo-section__date--date1" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle">14</text>
+                    <text class="blog-photo-section__date--month" x="50%" y="75%" dominant-baseline="middle" text-anchor="middle">NOV</text>
+                </svg>
+                <div class="blog-photo-section-titles">
+                    <h4 class="blog-photo-section-titles__title">Growing Food and a “Thirst” for Innovation</h4>
+                    <h5 class="blog-photo-section-titles__author">By Auskteez - 3 hours ago</h5>
+                </div>
+            </div>
+            <div class="blog-photo-section">
+                <svg class="blog-photo-section__date" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"><g>
+                    <g opacity=".5"><path fill="#262626" d="M5 0h50a5 5 0 0 1 5 5v50a5 5 0 0 1-5 5H5a5 5 0 0 1-5-5V5a5 5 0 0 1 5-5z"/></g></g>
+                    <text class="blog-photo-section__date--date1" x="50%" y="30%" dominant-baseline="middle" text-anchor="middle">10</text>
+                    <text class="blog-photo-section__date--month" x="50%" y="75%" dominant-baseline="middle" text-anchor="middle">NOV</text>
+                </svg>
+                <div class="blog-photo-section-titles">
+                    <h4 class="blog-photo-section-titles__title">Pesticides & Food: What You Need to Know</h4>
+                    <h5 class="blog-photo-section-titles__author">By Auskteez - 6 hours ago</h5>
+                </div>
+            </div>
+        </div>
+        <div class="blog-button-container">
+            <div class="blog-button-container__button">VIEW MORE</div>
         </div>
     </section>
 </main>

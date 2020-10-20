@@ -89,6 +89,7 @@ body {
               &__link:hover {
                 border: 2px solid #ff6033;
                 border-radius: 30%;
+                letter-spacing: 5px;
               }
             }
 
@@ -135,11 +136,18 @@ body {
         }
 
         &__text {
-          @include contentText($regular-text, $dark-text, 17px, 300)
+          @include contentText($regular-text, $dark-text, 17px, 300);
+          @media only screen and (max-width: 576px) {
+          font-weight: bold;
+          }
         }
+
 
         &__button {
           @include button(#ff6033);
+          @media only screen and (max-width: 576px) {
+            margin-top: 200px;
+          }
         }
 
         &__button:active {
@@ -429,6 +437,7 @@ body {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             height: 400px;
             width: 50%;
+            cursor: pointer;
             @media only screen and (max-width: 992px) {
               width: 80%;
             }
@@ -546,6 +555,127 @@ body {
             height: 55px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
           }
+        }
+      }
+    }
+
+    .blog {
+      min-height: 864px;
+      background-color: #b07cf7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      .blog-header {
+        width: 40%;
+        text-align: center;
+
+        &__title {
+          margin: 30px 0;
+          @include bigTitle($light-text);
+        }
+
+        &__text {
+          @include contentText($regular-text, $light-text, 17px, 300);
+        }
+      }
+
+      .blog-photo {
+        width: 78%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        @media only screen and (max-width: 992px) {
+          width: 90%;
+          flex-direction: column;
+          align-items: center;
+        }
+
+
+        .blog-photo-section {
+          width: 33%;
+          height: 310px;
+          margin-right: 30px;
+          position: relative;
+          display: flex;
+          align-items: flex-end;
+          @media only screen and (max-width: 992px) {
+            width: 60%;
+            margin-right: 0;
+            margin-bottom: 30px;
+          }
+          @media only screen and (max-width: 576px) {
+            width: 90%;
+          }
+          @media only screen and (max-width: 320px) {
+            width: 95%;
+          }
+
+          &__date {
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            fill: white;
+          }
+
+          &__date:hover {
+            transform: scale(1.3);
+            fill: magenta;
+          }
+
+          &__date--date1 {
+            @include contentText($regular-text, $light-text, 32px, 700);
+          }
+          &__date--month {
+            @include contentText($heavy-text, $light-text, 21px, 400);
+            text-transform: uppercase;
+          }
+
+          .blog-photo-section-titles {
+            padding: 0 0 20px 20px;
+
+            &__title {
+              margin: 0 0;
+              @include contentText($heavy-text, $light-text, 24px, 600)
+            }
+
+            &__author {
+              @include contentText($small-text, $light-text, 13px, 300);
+              margin-bottom: 0;
+            }
+
+          }
+
+        }
+
+        > :first-child {
+          @include backgroundGradient(url(../img/green.png))
+        }
+
+        > :nth-child(2) {
+          @include backgroundGradient(url(../img/soup.png))
+        }
+
+        > :last-child {
+          @include backgroundGradient(url(../img/red.png))
+        }
+      }
+
+      .blog-button-container {
+        @media only screen and (max-width: 992px) {
+          min-height: 150px;
+        }
+
+        &__button {
+          margin: 70px auto;
+          @include button(#f72b3b);
+        }
+
+        &__button:active {
+          transform: scale(0.8);
+          transition: all 0.3s;
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
         }
       }
     }
