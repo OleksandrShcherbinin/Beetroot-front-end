@@ -435,9 +435,6 @@ body .main .header-section .header .burger-menu {
     margin-left: 30px;
   }
 }
-body .main .header-section .header .burger-menu:checked ~ .header__logo {
-  display: none;
-}
 body .main .header-section .header .burger-menu:checked ~ .nav {
   display: block;
 }

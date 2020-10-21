@@ -57,13 +57,9 @@ body {
           }
         }
 
-
-        .burger-menu:checked ~ .header__logo {
-            display: none;
-        }
-
         .burger-menu:checked ~ .nav {
           display: block;
+
           .menu {
             width: 100%;
             margin: 0 0;
@@ -71,9 +67,11 @@ body {
             display: flex;
             flex-direction: column;
             align-items: center;
+
             &__item {
               margin-bottom: 12px;
             }
+
             &__link:hover {
               border: 2px solid #ff6033;
               border-radius: 30%;
