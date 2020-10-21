@@ -2,24 +2,15 @@
 @import "variables.scss";
 @import "mixins.scss";
 @import "function";
+@import "normalize";
 
-html {
-  scroll-behavior: smooth;
-}
 
-a {
-  text-decoration: none;
+a, a:hover {
   color: $dark-text;
 }
 
 a:hover {
-  text-decoration: none;
-  color: $dark-text;
   border-top: 2px solid #ff6033;
-}
-
-li {
-  list-style-type: none;
 }
 
 .scroll-img {
@@ -45,6 +36,58 @@ body {
         justify-content: space-between;
         align-items: center;
 
+        .burger-menu {
+          cursor: pointer;
+        }
+
+        @media only screen and (min-width: 576px) {
+          .burger-menu {
+            display: none;
+          }
+        }
+        @media only screen and (max-width: 576px) {
+          min-height: 90px;
+          background: rgba(100, 100, 100, 0.5);
+          justify-content: space-around;
+          position: sticky;
+          top: 0;
+          align-items: flex-start;
+          .header__logo {
+            margin-left: 30px;
+          }
+        }
+
+
+        .burger-menu:checked ~ .header__logo {
+            display: none;
+        }
+
+        .burger-menu:checked ~ .nav {
+          display: block;
+          .menu {
+            width: 100%;
+            margin: 0 0;
+            padding: 25px 0 5px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &__item {
+              margin-bottom: 12px;
+            }
+            &__link:hover {
+              border: 2px solid #ff6033;
+              border-radius: 30%;
+              letter-spacing: 5px;
+            }
+
+            &__link {
+            @include contentText($regular-text, $dark-text, 16px, 700);
+            padding-top: 9px;
+            text-transform: uppercase;
+           }
+          }
+        }
+
         @media only screen and (max-width: 1140px ) {
           justify-content: space-around;
           &__logo {
@@ -56,9 +99,54 @@ body {
           flex-direction: column;
         }
 
-         @media only screen and (max-width: 576px) {
-           height: 300px;
-         }
+        @media only screen and (max-width: 576px ) {
+          .burger-menu {
+            display: none;
+          }
+
+          .burger-img,
+          .burger-img:before,
+          .burger-img:after {
+            position: absolute;
+            top: 40px;
+            right: 30px;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 5px;
+            background: #262626;
+            cursor: pointer;
+          }
+          .burger-img:before {
+            content: "";
+            top: -8px;
+            right: 0;
+            transform: translate(0, 0);
+            transition: all 0.3s;
+          }
+          .burger-img:after {
+            content: "";
+            top: 8px;
+            right:  0;
+            transform: translate(0, 0);
+            transition: all 0.3s;
+          }
+          .burger-menu:checked ~ .nav {
+            display: block;
+          }
+
+          .burger-menu:checked ~ .burger-img {
+            transform: rotate(-45deg);
+            transition: all 0.3s;
+          }
+          .burger-menu:checked ~ .burger-img:before {
+            transform: rotate(90deg);
+            transition: all 0.3s;
+            top: 0;
+          }
+          .burger-menu:checked ~ .burger-img:after {
+            display: none;
+          }
+        }
 
         &__logo {
           @include logoText;
@@ -72,6 +160,9 @@ body {
           @media only screen and (max-width: 768px ) {
             width: 100%;
           }
+          @media only screen and (max-width: 576px ) {
+            display: none;
+          }
 
           .menu {
             width: 100%;
@@ -79,19 +170,6 @@ body {
             padding: 0 0;
             display: flex;
             justify-content: space-between;
-
-            @media only screen and (max-width: 576px) {
-              flex-direction: column;
-              text-align: center;
-              &__item {
-                margin-bottom: 12px;
-              }
-              &__link:hover {
-                border: 2px solid #ff6033;
-                border-radius: 30%;
-                letter-spacing: 5px;
-              }
-            }
 
             &__link {
               @include contentText($regular-text, $dark-text, 16px, 700);
@@ -120,8 +198,8 @@ body {
         }
 
         @media only screen and (max-width: 576px ) {
-          padding: 0 0;
-          width: 90%;
+          padding: 100px 0;
+          width: 80%;
         }
 
         * {
@@ -146,7 +224,7 @@ body {
         &__button {
           @include button(#ff6033);
           @media only screen and (max-width: 576px) {
-            margin-top: 200px;
+            margin-top: 400px;
           }
         }
 
@@ -574,6 +652,12 @@ body {
         &__title {
           margin: 30px 0;
           @include bigTitle($light-text);
+          @media only screen and (max-width: 576px) {
+            font-size: 65px;
+          }
+          @media only screen and (max-width: 320px) {
+            font-size: 55px;
+          }
         }
 
         &__text {
@@ -644,9 +728,7 @@ body {
               @include contentText($small-text, $light-text, 13px, 300);
               margin-bottom: 0;
             }
-
           }
-
         }
 
         > :first-child {
