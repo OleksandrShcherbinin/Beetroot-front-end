@@ -424,10 +424,11 @@ body .main .header-section .header .burger-menu {
 @media only screen and (max-width: 576px) {
   body .main .header-section .header {
     min-height: 90px;
+    width: 100%;
     background: rgba(100, 100, 100, 0.5);
     justify-content: space-around;
-    position: -webkit-sticky;
-    position: sticky;
+    position: fixed;
+    z-index: 999;
     top: 0;
     align-items: flex-start;
   }
@@ -447,17 +448,26 @@ body .main .header-section .header .burger-menu:checked ~ .nav .menu {
   align-items: center;
 }
 body .main .header-section .header .burger-menu:checked ~ .nav .menu__item {
-  margin-bottom: 12px;
+  width: 100%;
+  margin-bottom: 5px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+}
+body .main .header-section .header .burger-menu:checked ~ .nav .menu__item:hover {
+  transform: scale(1.1);
+}
+body .main .header-section .header .burger-menu:checked ~ .nav .menu__item:active {
+  transform: scale(1);
 }
 body .main .header-section .header .burger-menu:checked ~ .nav .menu__link:hover {
-  border: 2px solid #ff6033;
-  border-radius: 30%;
+  border: none;
   letter-spacing: 5px;
 }
 body .main .header-section .header .burger-menu:checked ~ .nav .menu__link {
   font-family: Raleway-Regular, sans-serif;
   color: #262626;
-  font-size: 16px;
+  font-size: 42px;
   font-weight: 700;
   padding-top: 9px;
   text-transform: uppercase;

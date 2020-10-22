@@ -47,9 +47,11 @@ body {
         }
         @media only screen and (max-width: 576px) {
           min-height: 90px;
+          width: 100%;
           background: rgba(100, 100, 100, 0.5);
           justify-content: space-around;
-          position: sticky;
+          position: fixed;
+          z-index: 999;
           top: 0;
           align-items: flex-start;
           .header__logo {
@@ -69,17 +71,27 @@ body {
             align-items: center;
 
             &__item {
-              margin-bottom: 12px;
+              width: 100%;
+              margin-bottom: 5px;
+              text-align: center;
+              cursor: pointer;
+              box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+            }
+
+            &__item:hover {
+              transform: scale(1.1);
+            }
+            &__item:active {
+              transform: scale(1);
             }
 
             &__link:hover {
-              border: 2px solid #ff6033;
-              border-radius: 30%;
+              border: none;
               letter-spacing: 5px;
             }
 
             &__link {
-            @include contentText($regular-text, $dark-text, 16px, 700);
+            @include contentText($regular-text, $dark-text, 42px, 700);
             padding-top: 9px;
             text-transform: uppercase;
            }
