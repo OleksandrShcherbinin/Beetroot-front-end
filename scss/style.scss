@@ -40,6 +40,10 @@ body {
           cursor: pointer;
         }
 
+        @media only screen and (orientation: landscape) {
+          min-height: 90px;
+        }
+
         @media only screen and (min-width: 576px) {
           .burger-menu {
             display: none;
@@ -48,7 +52,7 @@ body {
         @media only screen and (max-width: 576px) {
           min-height: 90px;
           width: 100%;
-          background: rgba(100, 100, 100, 0.5);
+          background: rgba(100, 100, 100, 0.95);
           justify-content: space-around;
           position: fixed;
           z-index: 999;
@@ -57,6 +61,9 @@ body {
           .header__logo {
             margin-left: 30px;
           }
+        }
+        @media only screen and (max-width: 576px) and (orientation: landscape) {
+          min-height: 60px;
         }
 
         .burger-menu:checked ~ .nav {
@@ -87,13 +94,17 @@ body {
 
             &__link:hover {
               border: none;
+              color: white;
               letter-spacing: 5px;
             }
 
             &__link {
-            @include contentText($regular-text, $dark-text, 42px, 700);
+            @include contentText($regular-text, $dark-text, 34px, 700);
             padding-top: 9px;
             text-transform: uppercase;
+              @media only screen and (max-width: 823px) and (orientation: landscape) {
+              font-size: 26px;
+              }
            }
           }
         }
@@ -121,7 +132,7 @@ body {
             top: 40px;
             right: 30px;
             transform: translate(-50%, -50%);
-            width: 40px;
+            width: 42px;
             height: 5px;
             background: #262626;
             cursor: pointer;
@@ -194,7 +205,7 @@ body {
         padding: 180px 0 0 0;
         width: 30%;
 
-        @media only screen and (max-width: 1140px ) {
+        @media only screen and (max-width: 1140px ) and (orientation: landscape){
           padding: 80px 0 0 0;
           width: 60%;
         }
@@ -205,6 +216,10 @@ body {
           display: flex;
           flex-direction: column;
           align-items: center;
+        }
+
+        @media only screen and (max-width: 823px) and (orientation: landscape) {
+          padding: 0 0;
         }
 
         @media only screen and (max-width: 576px ) {
@@ -221,6 +236,15 @@ body {
           font-size: 60px;
           font-weight: 400;
           margin-bottom: 0;
+          @media only screen and (max-width: 640px) and (orientation: landscape) {
+          font-size: 30px;
+          }
+          @media only screen and (max-width: 568px) and (orientation: landscape) {
+            margin-top: 0;
+          }
+          @media only screen and (max-height: 280px)  and (orientation: landscape) {
+          font-size: 20px;
+          }
         }
 
         &__text {
@@ -228,13 +252,28 @@ body {
           @media only screen and (max-width: 576px) {
           font-weight: bold;
           }
+          @media only screen and (max-width: 568px) and (orientation: landscape) {
+            margin: 0 0;
+          }
+          @media only screen and (max-height: 280px)  and (orientation: landscape) {
+          font-size: 14px;
+          }
         }
 
 
         &__button {
           @include button(#ff6033);
           @media only screen and (max-width: 576px) {
-            margin-top: 400px;
+            margin-top: 70px;
+          }
+          @media only screen and (max-width: 568px) and (orientation: landscape) {
+            margin-top: 20px;
+          }
+          @media only screen and (max-width: 380px)  and (orientation: landscape) {
+            margin-top: 300px;
+          }
+          @media only screen and (max-height: 280px)  and (orientation: landscape) {
+          margin: 0 0;
           }
         }
 
@@ -321,8 +360,9 @@ body {
       @media only screen and (max-width: 992px) {
         flex-direction: column;
       }
-      @media only screen and (max-width: 576px) {
+      @media only screen and (max-width: 576px) and (min-resolution: 3dppx){
         min-height: 800px;
+        @include backgroundNice(url(../img/small-tomatoes.png), center, 0.5)
       }
 
       .button-icons > * {
@@ -378,16 +418,13 @@ body {
           display: none;
         }
 
-        @include backgroundNice(url(../img/tomatoes.png), bottom right);
+        @include backgroundNice(url(../img/tomatoes.png), bottom right, 0);
         display: flex;
         align-items: center;
         justify-content: center;
         @media only screen and (max-width: 767px) {
           margin-left: 0;
-          @include backgroundNice(url(../img/tomatoes.png), center);
-        }
-        @media only screen and (max-width: 576px) {
-          width: 53%;
+          @include backgroundNice(url(../img/tomatoes.png), center, 0);
         }
       }
 
@@ -403,6 +440,7 @@ body {
         @include bigTitle($light-text);
         margin: 0 0;
         font-size: 40px;
+        color: $dark-text;
         @media only screen and (min-width: 576px) {
           display: none;
         }
@@ -462,7 +500,7 @@ body {
           }
 
           .big-pic {
-          @include backgroundNice(url(../img/peaches.png), center);
+          @include backgroundNice(url(../img/peaches.png), center, 0);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
             width: 65%;
             margin-right: 30px;
@@ -502,12 +540,12 @@ body {
             }
 
             &__pic-1 {
-              @include backgroundNice(url(../img/berry1.png), center);
+              @include backgroundNice(url(../img/berry1.png), center, 0);
               margin-bottom: 30px;
             }
 
             &__pic-2 {
-              @include backgroundNice(url(../img/berry2.png), center);
+              @include backgroundNice(url(../img/berry2.png), center, 0);
             }
           }
         }
@@ -539,7 +577,7 @@ body {
           }
 
           &__pic-1 {
-            @include backgroundNice(url(../img/berry3.png), center);
+            @include backgroundNice(url(../img/berry3.png), center, 0);
             margin-right: 30px;
             @media only screen and (max-width: 992px) {
               margin: 0 0 30px;
@@ -547,7 +585,7 @@ body {
           }
 
           &__pic-2 {
-            @include backgroundNice(url(../img/hurma.png), center);
+            @include backgroundNice(url(../img/hurma.png), center, 0);
           }
         }
       }
@@ -572,18 +610,33 @@ body {
     }
 
     .subscribe {
-      @include backgroundNice(url(../img/form-background.png), center);
+      @include backgroundNice(url(../img/form-background.png), right, 0);
       min-height: 500px;
       color: $dark-text;
       font-family: $regular-text;
       display: flex;
       align-items: center;
+      @media only screen and (max-width: 1200px) {
+        @include backgroundNice(url(../img/form-background.png), right, 0.2);
+      }
+      @media only screen and (max-width: 992px) {
+        @include backgroundNice(url(../img/form-background.png), right, 0.6);
+      }
+      @media only screen and (max-width: 768px) {
+        @include backgroundNice(url(../img/form-background.png), right, 0.8);
+      }
+      @media only screen and (max-width: 576px) {
+        @include backgroundNice(url(../img/mini-form.png), center, 0.9);
+      }
 
       .subscribe-col {
         padding-left: 165px;
         @media only screen and (max-width:768px) {
             padding-left: 65px;
-          }
+        }
+        @media only screen and (max-width:576px) {
+            padding-left: 40px;
+        }
       }
 
       .subscribe-row-1 {
@@ -658,6 +711,13 @@ body {
       .blog-header {
         width: 40%;
         text-align: center;
+
+        @media only screen and (max-width: 823px) {
+          width: 60%;
+        }
+        @media only screen and (max-width: 576px) {
+          width: 80%;
+        }
 
         &__title {
           margin: 30px 0;
@@ -771,5 +831,192 @@ body {
         }
       }
     }
+
+    .footer-form {
+      @include backgroundNice(url("../img/form-back.png"), center, 0);
+      width: 100%;
+
+      a:hover {
+        border: none;
+      }
+
+      .form-text {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 28%;
+        @media only screen and (max-width: 992px) {
+          width: 60%;
+        }
+        @media only screen and (max-width: 768px) {
+          width: 70%;
+        }
+        @media only screen and (max-width: 576px) {
+          width: 80%;
+        }
+
+
+        &__title {
+          @include bigTitle($dark-text);
+          margin-bottom: 0;
+          @media only screen and (max-width: 823px) {
+            margin-top: 20px;
+          }
+          @media only screen and (max-width: 576px) {
+            font-size: 50px;
+          }
+        }
+        &__text {
+          @include contentText($regular-text, $dark-text, 17px, 300)
+        }
+      }
+
+      .form-row {
+        display: flex;
+        justify-content: center;
+        margin-top: 45px;
+        margin-bottom: 120px;
+        width: 85%;
+        @media only screen and (max-width: 823px) {
+          flex-direction: column;
+          align-items: center;
+          margin-top: 0;
+          margin-bottom: 50px;
+        }
+
+        .my-form {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          width: 35%;
+          margin-right: 15%;
+          @media only screen and (max-width: 823px) {
+            width: 50%;
+            margin-right: 0;
+            margin-bottom: 40px;
+          }
+          @media only screen and (max-width: 411px) {
+            width: 80%;
+          }
+
+          .submit {
+            @include button(#eaa258);
+            padding: 0 0;
+            margin-bottom: 0;
+          }
+          .submit:active {
+            transform: scale(0.8);
+            border: none;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+         }
+
+          input, textarea {
+            margin-bottom: 15px;
+            width: 100%;
+            height: 50px;
+            background-color: #00c4c4;
+            opacity: 0.5;
+            border: none;
+            resize: none;
+            padding: 20px;
+            @media only screen and (max-width: 823px) {
+              height: 25px;
+            }
+          }
+
+          textarea {
+            height: 40%;
+          }
+
+          input:focus, textarea:focus {
+            outline: none;
+            background-color: #00c4c4; opacity: 1;
+            border-left: 5px solid #355b82;
+            transition: all 0.4s;
+          }
+        }
+        .form-row-address {
+          width: 25%;
+          @media only screen and (max-width: 992px) {
+            width: 40%;
+          }
+          @media only screen and (max-width: 823px) {
+            width: 60%;
+            text-align: center;
+          }
+          @media only screen and (max-width: 576px) {
+            width: 80%;
+          }
+
+          &__title {
+            @include contentText($heavy-text, $dark-text, 25px, 700);
+            margin: 0 0;
+          }
+          &__text {
+            @include contentText($small-text, $dark-text, 17px, 300)
+          }
+        }
+      }
+
+      .footer {
+        width: 100%;
+        height: 90px;
+        background-color: #262626;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media only screen and (max-width: 823px) {
+          height: 120px;
+          flex-direction: column;
+
+        }
+
+        span {
+          @include contentText($heavy-text, #ff2b58, 15px, 300);
+          @media only screen and (max-width: 823px) {
+            font-size: 13px;
+          }
+        }
+
+        &__text {
+          @include contentText($regular-text, #b9b9b9, 16px, 300);
+          margin: 0 0;
+          @media only screen and (max-width: 823px) {
+            font-size: 14px;
+          }
+        }
+
+        &__text--light {
+          @include contentText($small-text, #b9b9b9, 14px, 300);
+          @media only screen and (max-width: 823px) {
+            font-size: 12px;            
+          }
+        }
+
+        &__logo {
+          @include logoText;
+          margin: 0 0;
+          font-size: 25px;
+          color: #b9b9b9;
+        }
+        &__logo:hover {
+          transform: rotate(360deg);
+          transition: all 0.5s;
+        }
+      }
+    }
   }
 }
+
+input:focus::-webkit-input-placeholder {color: transparent}
+input:focus:-moz-placeholder {color: transparent}
+input:focus::-moz-placeholder {color: transparent}
+input:focus:-ms-input-placeholder {color: transparent}
+textarea:focus::-webkit-input-placeholder {color: transparent}
+textarea:focus:-moz-placeholder {color: transparent}
+textarea:focus::-moz-placeholder {color: transparent}
+textarea:focus:-ms-input-placeholder {color: transparent}

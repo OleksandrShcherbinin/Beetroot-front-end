@@ -1,15 +1,24 @@
 @import "variables";
 
 @mixin headerSection {
-  background-image: url("../img/strawberry.png");
-  background-position: center;
-  min-height: 1064px;
+  background: url("../img/strawberry.png") top right;
+  background-size: cover;
+  height: 100vh;
   padding: 0 11%;
 
+  @media only screen and (max-width: 1200px) {
+    background-position: center;
+  }
+
   @media only screen and (max-width: 576px) {
-    background-image: url("../img/small-strawberry.png");
+    background: url("../img/small-strawberry.png") center;
     background-size: cover;
     padding: 0 0;
+  }
+
+  @media only screen and (max-width: 320px) {
+    background: url("../img/mini-strawbery.png") center;
+    background-size: cover;
   }
 
 }
@@ -51,8 +60,8 @@
   font-weight: $weight;
 }
 
-@mixin backgroundNice($image-url, $position) {
-  background-image: $image-url;
+@mixin backgroundNice($image-url, $position, $opacity) {
+  background-image: linear-gradient(rgba(255,255,255,$opacity), rgba(255,255,255,$opacity)), $image-url;
   background-position: $position;
   background-size: cover;
   -webkit-background-size: cover;
