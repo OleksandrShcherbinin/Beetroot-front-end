@@ -386,6 +386,7 @@ a:hover {
   top: 80%;
   cursor: pointer;
   text-align: -webkit-center;
+  text-align: -moz-center;
 }
 
 @supports (position: -ms-device-fixed) {
