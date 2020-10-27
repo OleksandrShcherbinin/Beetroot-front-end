@@ -628,7 +628,6 @@ body .main .header-section .head-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 0;
   }
 }
 @media only screen and (max-width: 823px) and (orientation: landscape) {
