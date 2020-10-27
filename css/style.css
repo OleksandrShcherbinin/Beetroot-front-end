@@ -1523,6 +1523,7 @@ body .main .footer-form .form-text__text {
   color: #262626;
   font-size: 17px;
   font-weight: 300;
+  width: 100%;
 }
 body .main .footer-form .form-row {
   display: flex;
