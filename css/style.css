@@ -694,7 +694,7 @@ body .main .header-section .head-content__button {
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 55px;
+  min-height: 55px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   background-color: #ff6033;
   color: #ffffff;
@@ -1143,7 +1143,7 @@ body .main .gallery .button-container__button {
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 55px;
+  min-height: 55px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   background-color: #5585a2;
   color: #ffffff;
@@ -1451,7 +1451,7 @@ body .main .blog .blog-button-container__button {
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 55px;
+  min-height: 55px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   background-color: #f72b3b;
   color: #ffffff;
@@ -1574,7 +1574,7 @@ body .main .footer-form .form-row .my-form .submit {
   justify-content: center;
   align-items: center;
   width: 200px;
-  height: 55px;
+  min-height: 55px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
   background-color: #eaa258;
   color: #ffffff;
