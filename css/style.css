@@ -892,6 +892,7 @@ body .main .our-services .icon-item:hover {
 body .main .our-services__image {
   margin-left: 70px;
   min-height: 600px;
+  height: 0;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), url(../img/tomatoes.png);
   background-position: bottom right;
   background-size: cover;
