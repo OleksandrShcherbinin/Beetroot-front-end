@@ -384,13 +384,15 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   position: -ms-device-fixed;
-  text-align: -webkit-center;
   top: 80%;
   cursor: pointer;
+  text-align: -webkit-center;
 }
-.scroll-img _:-ms-fullscreen, .scroll-img :root .foo {
-  left: 50%;
-  transform: translateX(-50%);
+@supports (position: -ms-device-fixed) {
+  .scroll-img__image {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 body {
