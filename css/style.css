@@ -385,16 +385,14 @@ a:hover {
   position: sticky;
   position: -ms-device-fixed;
   top: 80%;
+  text-align: center;
   cursor: pointer;
 }
-.scroll-img :-ms-fullscreen, .scroll-img :root .ie11up {
-  left: 50%;
-  transform: translateX(-50%);
-}
 
-@supports (text-align: center) {
+@supports (position: -ms-device-fixed) {
   .scroll-img {
-    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
 body {
@@ -406,8 +404,10 @@ body .main .header-section {
   height: 100vh;
   padding: 0 11%;
 }
-body .main .header-section :-ms-fullscreen, body .main .header-section :root .ie11up {
-  height: 100%;
+@supports (position: -ms-device-fixed) {
+  body .main .header-section {
+    height: 100%;
+  }
 }
 @media only screen and (max-width: 1200px) {
   body .main .header-section {
@@ -433,6 +433,11 @@ body .main .header-section .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@supports (position: -ms-device-fixed) {
+  body .main .header-section .header {
+    height: 0;
+  }
 }
 body .main .header-section .header .burger-menu {
   cursor: pointer;
@@ -611,23 +616,33 @@ body .main .header-section .head-content {
   padding: 180px 0 0 0;
   width: 30%;
 }
-body .main .header-section .head-content :-ms-fullscreen, body .main .header-section .head-content :root .ie11up {
-  height: 0;
+@supports (position: -ms-device-fixed) {
+  body .main .header-section .head-content {
+    height: 0;
+  }
+}
+@media only screen and (max-height: 700px) {
+  body .main .header-section .head-content {
+    padding: 0 0;
+  }
 }
 @media only screen and (max-width: 1140px) and (orientation: landscape) {
   body .main .header-section .head-content {
-    padding: 80px 0 0 0;
     width: 60%;
   }
 }
 @media only screen and (max-width: 768px) {
   body .main .header-section .head-content {
-    padding: 80px 0 0 0;
     width: 80%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+  }
+  @supports (position: -ms-device-fixed) {
+    body .main .header-section .head-content {
+      height: 0;
+    }
   }
 }
 @media only screen and (max-width: 823px) and (orientation: landscape) {
@@ -681,9 +696,10 @@ body .main .header-section .head-content__text {
     margin: 0 0;
   }
 }
-@media only screen and (max-height: 280px) and (orientation: landscape) {
+@media only screen and (max-height: 390px) and (orientation: landscape) {
   body .main .header-section .head-content__text {
     font-size: 14px;
+    margin: 5px 0;
   }
 }
 body .main .header-section .head-content__button {
@@ -714,6 +730,11 @@ body .main .header-section .head-content__button {
 @media only screen and (max-width: 380px) and (orientation: landscape) {
   body .main .header-section .head-content__button {
     margin-top: 300px;
+  }
+}
+@media only screen and (max-height: 576px) {
+  body .main .header-section .head-content__button {
+    margin: 0 0;
   }
 }
 @media only screen and (max-height: 280px) and (orientation: landscape) {
@@ -819,6 +840,11 @@ body .main .our-services {
   justify-content: center;
   align-items: center;
 }
+@supports (position: -ms-device-fixed) {
+  body .main .our-services {
+    height: 0;
+  }
+}
 @media only screen and (max-width: 992px) {
   body .main .our-services {
     flex-direction: column;
@@ -856,6 +882,11 @@ body .main .our-services .button-icons .icon-item {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+@supports (position: -ms-device-fixed) {
+  body .main .our-services .button-icons .icon-item {
+    height: 0;
+  }
 }
 body .main .our-services .button-icons .icon-item .icon-image {
   border-left: 1px solid #9d9d9d;
@@ -900,6 +931,11 @@ body .main .our-services__image {
 @media only screen and (max-width: 576px) {
   body .main .our-services__image {
     display: none;
+  }
+}
+@supports (position: -ms-device-fixed) {
+  body .main .our-services__image {
+    height: 0;
   }
 }
 @media only screen and (max-width: 767px) {
@@ -997,6 +1033,11 @@ body .main .gallery .photo-container .first-row {
   display: flex;
   justify-content: center;
 }
+@supports (position: -ms-device-fixed) {
+  body .main .gallery .photo-container .first-row {
+    height: 0;
+  }
+}
 @media only screen and (max-width: 992px) {
   body .main .gallery .photo-container .first-row {
     flex-direction: column;
@@ -1079,6 +1120,11 @@ body .main .gallery .photo-container .second-row {
     flex-direction: column;
     align-items: center;
   }
+  @supports (position: -ms-device-fixed) {
+    body .main .gallery .photo-container .second-row {
+      height: 0;
+    }
+  }
 }
 body .main .gallery .photo-container .second-row__pic-1, body .main .gallery .photo-container .second-row__pic-2 {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
@@ -1159,6 +1205,11 @@ body .main .subscribe {
   font-family: Raleway-Regular, sans-serif;
   display: flex;
   align-items: center;
+}
+@supports (position: -ms-device-fixed) {
+  body .main .subscribe {
+    height: 0;
+  }
 }
 @media only screen and (max-width: 1200px) {
   body .main .subscribe {
@@ -1287,6 +1338,11 @@ body .main .blog {
   justify-content: space-around;
   align-items: center;
 }
+@supports (position: -ms-device-fixed) {
+  body .main .blog {
+    height: 0;
+  }
+}
 body .main .blog .blog-header {
   width: 40%;
   text-align: center;
@@ -1329,6 +1385,11 @@ body .main .blog .blog-photo {
   display: flex;
   justify-content: center;
   cursor: pointer;
+}
+@supports (position: -ms-device-fixed) {
+  body .main .blog .blog-photo {
+    height: 0;
+  }
 }
 @media only screen and (max-width: 992px) {
   body .main .blog .blog-photo {
@@ -1475,6 +1536,11 @@ body .main .footer-form .form-text {
   text-align: center;
   width: 28%;
 }
+@supports (position: -ms-device-fixed) {
+  body .main .footer-form .form-text {
+    height: 0;
+  }
+}
 @media only screen and (max-width: 992px) {
   body .main .footer-form .form-text {
     width: 60%;
@@ -1519,6 +1585,11 @@ body .main .footer-form .form-row {
   margin-top: 45px;
   margin-bottom: 120px;
 }
+@supports (position: -ms-device-fixed) {
+  body .main .footer-form .form-row {
+    height: 0;
+  }
+}
 @media only screen and (max-width: 823px) {
   body .main .footer-form .form-row {
     flex-direction: column;
@@ -1534,6 +1605,11 @@ body .main .footer-form .form-row .my-form {
   align-items: flex-start;
   width: 35%;
   margin-right: 15%;
+}
+@supports (position: -ms-device-fixed) {
+  body .main .footer-form .form-row .my-form {
+    height: 0;
+  }
 }
 @media only screen and (max-width: 823px) {
   body .main .footer-form .form-row .my-form {
