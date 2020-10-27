@@ -384,6 +384,7 @@ a:hover {
   position: -webkit-sticky;
   position: sticky;
   position: -ms-device-fixed;
+  text-align: -webkit-center;
   top: 80%;
   cursor: pointer;
 }
@@ -392,12 +393,6 @@ a:hover {
   .scroll-img {
     left: 50%;
     transform: translateX(-50%);
-  }
-
-  @supports (text-align: center) {
-    .scroll-img {
-      text-align: center;
-    }
   }
 }
 body {
