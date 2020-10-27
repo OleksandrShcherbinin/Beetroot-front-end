@@ -383,18 +383,18 @@ a:hover {
   margin: -20px auto;
   position: -webkit-sticky;
   position: sticky;
-  position: -ms-device-fixed;
   top: 80%;
   cursor: pointer;
   text-align: -webkit-center;
 }
+
 @supports (position: -ms-device-fixed) {
-  .scroll-img__image {
+  .scroll-img {
+    position: -ms-device-fixed;
     left: 50%;
     transform: translateX(-50%);
   }
 }
-
 body {
   margin: 0 0;
 }
