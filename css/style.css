@@ -628,6 +628,7 @@ body .main .header-section .head-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 0;
   }
 }
 @media only screen and (max-width: 823px) and (orientation: landscape) {
@@ -673,6 +674,7 @@ body .main .header-section .head-content__text {
 }
 @media only screen and (max-width: 576px) {
   body .main .header-section .head-content__text {
+    width: 100%;
     font-weight: bold;
   }
 }
@@ -830,6 +832,7 @@ body .main .our-services {
 @media only screen and (max-width: 992px) {
   body .main .our-services {
     flex-direction: column;
+    height: auto;
   }
 }
 @media only screen and (max-width: 576px) and (-webkit-min-device-pixel-ratio: 3), only screen and (max-width: 576px) and (min-resolution: 3dppx) {
