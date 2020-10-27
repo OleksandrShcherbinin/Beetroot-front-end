@@ -388,13 +388,11 @@ a:hover {
   top: 80%;
   cursor: pointer;
 }
-
-@supports (position: -ms-device-fixed) {
-  .scroll-img {
-    left: 50%;
-    transform: translateX(-50%);
-  }
+.scroll-img _:-ms-fullscreen, .scroll-img :root .foo {
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 body {
   margin: 0 0;
 }
